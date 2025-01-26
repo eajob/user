@@ -3,9 +3,10 @@ name: PL
 on: [push, workflow_dispatch]
 
 jobs:
-  build:
-
+  jobs:
+  setup-rdp-tunnel:
     runs-on: windows-latest
+    timeout-minutes: 60  # Adjust the timeout as needed
 
     steps:
     - name: Download
